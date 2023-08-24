@@ -1,6 +1,7 @@
 // Exemplo 2
 document.getElementById("estatisticasgerais").innerText = "Peterson Senha";
-document.getElementById("quantidadeMaquina1").innerText = "732";
+document.getElementById("nomeMaquina1").innerHTML = "Bruno";
+document.getElementById("qtdeM1").innerText = "732";
 
 const socket = new WebSocket("ws://petersonsenha.github.io/CleanHealth/");
 socket.onmessage = event => {
