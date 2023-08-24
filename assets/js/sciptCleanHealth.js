@@ -3,6 +3,19 @@ document.getElementById("estatisticasgerais").innerText = "Peterson Senha";
 document.getElementById("nomeMaquina1").innerHTML = "Bruno";
 document.getElementById("qtdeM1").innerText = "732";
 
+var contador=0; 
+
+function atualizarContador() {
+  contador++;
+  document.getElementById("qtdeM1").innerText = contador;
+
+  // Chama a função novamente após um segundo
+  setTimeout(atualizarContador, 1000);
+}
+
+// Chama a função pela primeira vez
+atualizarContador();
+
 const socket = new WebSocket("ws://petersonsenha.github.io/CleanHealth/");
 socket.onmessage = event => {
   const data = JSON.parse(event.data);
